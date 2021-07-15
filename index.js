@@ -21,70 +21,70 @@ var margin4ReaderPage ="-75px auto";
 
 
 //模拟点击"继续阅读"
-$('.goBtn').click();
-$('.read-all').click();
+jQuery('.goBtn').click();
+jQuery('.read-all').click();
 
 
 //不移除而进行隐藏。否则滚动时会频繁出现 Uncaught TypeError: Cannot read property 'top' of undefined
-$(".aside").hide();  
+jQuery(".aside").hide();  
 //----------------
 
 
 //移除不需要的页面内容#1
-$('.zsj-topbar').remove();
-$("#doc #hd").remove();
-$(".crubms-wrap").remove();
-$(".user-bar").remove();
-$("#doc-header").remove();
-$(".reader-tools-bar-wrap").remove();
-$(".fix-searchbar-wrap").remove();
-$("#bottom-doc-list-8").remove();
-$(".ft").remove();
-$("#ft").remove();
-$("#docBubble").remove();
-$('.hd').remove();
-$('.wk-other-new-cntent').remove();
-$('#html-reader-go-more').remove();
-$('.new-wm').remove();
-$('#bottom-download').remove();
-$('#pay-page').remove();
-$('.banner-wrap').remove();
-$('#next_doc_box').remove();
-$('.high-quality-doc').remove();
-$('.new-ico-wkmember-free-doc').remove();
-$('.doc-tag-pay-normal').remove();
-$('.doc-tag-professional').remove();
-$('.doc-tag-pay-discount').remove();
-$('.doc-tag-ticket').remove();
-$('.reader-back2top-wrap').remove();
-$("body").attr("margin", "auto");
-//$(".bd").attr("style", "height:1262.879px"); //暂时注释掉
+jQuery('.zsj-topbar').remove();
+jQuery("#doc #hd").remove();
+jQuery(".crubms-wrap").remove();
+jQuery(".user-bar").remove();
+jQuery("#doc-header").remove();
+jQuery(".reader-tools-bar-wrap").remove();
+jQuery(".fix-searchbar-wrap").remove();
+jQuery("#bottom-doc-list-8").remove();
+jQuery(".ft").remove();
+jQuery("#ft").remove();
+jQuery("#docBubble").remove();
+jQuery('.hd').remove();
+jQuery('.wk-other-new-cntent').remove();
+jQuery('#html-reader-go-more').remove();
+jQuery('.new-wm').remove();
+jQuery('#bottom-download').remove();
+jQuery('#pay-page').remove();
+jQuery('.banner-wrap').remove();
+jQuery('#next_doc_box').remove();
+jQuery('.high-quality-doc').remove();
+jQuery('.new-ico-wkmember-free-doc').remove();
+jQuery('.doc-tag-pay-normal').remove();
+jQuery('.doc-tag-professional').remove();
+jQuery('.doc-tag-pay-discount').remove();
+jQuery('.doc-tag-ticket').remove();
+jQuery('.reader-back2top-wrap').remove();
+jQuery("body").attr("margin", "auto");
+//jQuery(".bd").attr("style", "height:1262.879px"); //暂时注释掉
 //------------------------------
 
 
 //移除不需要的页面内容#2:适应新View的页面
-$('.header-wrapper').remove();
-$('.relative-recommend-wrapper').remove();
-$('.propagation-wrapper').remove();
-$('.reader-topbar').remove();
-$('.fc-parallax-scrolling').hide();
-$('.no-full-screen').hide();
-$('.try-end-fold-page').remove();
-$('.hx-warp').remove();
-$('.left-sidebar-wrapper').hide();
-$('#page-footer').hide();
+jQuery('.header-wrapper').remove();
+jQuery('.relative-recommend-wrapper').remove();
+jQuery('.propagation-wrapper').remove();
+jQuery('.reader-topbar').remove();
+jQuery('.fc-parallax-scrolling').hide();
+jQuery('.no-full-screen').hide();
+jQuery('.try-end-fold-page').remove();
+jQuery('.hx-warp').remove();
+jQuery('.left-sidebar-wrapper').hide();
+jQuery('#page-footer').hide();
 //------------------------------
 
 
 //继续删除页面内容
-$('#doc_bottom_wrap').remove();
-$('.mod.lastcell-dialog').remove();
-$('.doc-tag-wrap.super-vip.fixed').remove();
-$('.title-con-fc').remove();
+jQuery('#doc_bottom_wrap').remove();
+jQuery('.mod.lastcell-dialog').remove();
+jQuery('.doc-tag-wrap.super-vip.fixed').remove();
+jQuery('.title-con-fc').remove();
 
 
 //去除边框
-$('.reader-page').css({
+jQuery('.reader-page').css({
     border: 0
 });
 
@@ -98,11 +98,11 @@ jQuery.fn.extend({
 
 
 //稍微去除"纸张间距"
-$('.reader-page').css("margin", margin4ReaderPage);
+jQuery('.reader-page').css("margin", margin4ReaderPage);
 
 
 //恢复空白背景色
-$('html,body').css("background", "#fff");
+jQuery('html,body').css("background", "#fff");
 
 
 
@@ -110,14 +110,14 @@ $('html,body').css("background", "#fff");
 var _h = document.body.scrollHeight,
     _tmp = 0;
 var _t = window.setInterval(function () {
-    $(window).scrollTop(_tmp);
+    jQuery(window).scrollTop(_tmp);
     _tmp = _tmp + 700;
     _h = document.body.scrollHeight;
     if (_tmp > _h) {
         window.clearInterval(_t);		
 		
 		//打印的时候，会被这个CSS影响 @media print{body{display:none}}，因此覆盖掉
-		$('body').css("display","block");
+		jQuery('body').css("display","block");
 		
 		//弹出打印窗口
         window.setTimeout(function () {
